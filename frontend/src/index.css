@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f0f13;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #c8f;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+/* input area */
+.input-section {
+  background: #1a1a22;
+  border: 1px solid #2e2e3a;
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-section label {
+  display: block;
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+textarea {
+  width: 100%;
+  background: #0f0f13;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #e0e0e0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  padding: 0.8rem;
+  resize: vertical;
+  min-height: 130px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  border-color: #c8f;
+}
+
+.hint {
+  font-size: 0.75rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.btn-submit {
+  display: block;
+  margin-top: 1rem;
+  background: #c8f;
+  color: #0f0f13;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn-submit:hover {
+  opacity: 0.85;
+}
+
+.btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* error box */
+.error-box {
+  background: #2a1010;
+  border: 1px solid #7a2020;
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  color: #f88;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+/* result sections */
+.result-section {
+  margin-bottom: 2rem;
+}
+
+.result-section h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #c8f;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid #2e2e3a;
+  padding-bottom: 0.4rem;
+}
+
+/* user info card */
+.info-card {
+  background: #1a1a22;
+  border: 1px solid #2e2e3a;
+  border-radius: 8px;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.info-row span:first-child {
+  font-size: 0.7rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.info-row span:last-child {
+  font-size: 0.88rem;
+  color: #ddd;
+}
+
+/* summary */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+}
+
+.summary-stat {
+  background: #1a1a22;
+  border: 1px solid #2e2e3a;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  text-align: center;
+}
+
+.summary-stat .num {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #c8f;
+  line-height: 1;
+}
+
+.summary-stat .label {
+  font-size: 0.72rem;
+  color: #666;
+  margin-top: 0.3rem;
+  text-transform: uppercase;
+}
+
+/* tags for invalid/duplicates */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-family: 'Courier New', monospace;
+  font-size: 0.82rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.tag.invalid {
+  background: #2a1010;
+  color: #f77;
+  border: 1px solid #7a2020;
+}
+
+.tag.duplicate {
+  background: #1e1a00;
+  color: #e8c44a;
+  border: 1px solid #5a4a00;
+}
+
+.tag.none {
+  color: #444;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* tree cards */
+.tree-card {
+  background: #1a1a22;
+  border: 1px solid #2e2e3a;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.tree-card.has-cycle {
+  border-color: #7a2020;
+}
+
+.tree-card .tree-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.tree-card .root-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #c8f;
+  font-family: 'Courier New', monospace;
+}
+
+.badge {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.badge.cycle {
+  background: #7a2020;
+  color: #f88;
+}
+
+.badge.depth {
+  background: #1a2a3a;
+  color: #7af;
+}
+
+/* tree visualization */
+.tree-visual {
+  font-family: 'Courier New', monospace;
+  font-size: 0.83rem;
+  color: #bbb;
+  line-height: 1.7;
+  background: #0f0f13;
+  border-radius: 5px;
+  padding: 0.7rem 0.9rem;
+}
+
+.tree-visual .node {
+  color: #e0e0e0;
+  font-weight: 600;
+}
+
+.tree-visual .connector {
+  color: #444;
+}
