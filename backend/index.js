@@ -14,11 +14,12 @@ const USER_INFO = {
 }
 
 // just returns who you are — handy for verifying the API is live
-app.get('/bfhl', (req, res) => {
+// registered on both paths: /bfhl (direct) and /api/bfhl (via Vite proxy in dev)
+app.get(['/bfhl', '/api/bfhl'], (req, res) => {
   res.json({ user: USER_INFO });
 });
 
-app.post('/bfhl', (req, res) => {
+app.post(['/bfhl', '/api/bfhl'], (req, res) => {
   const { data } = req.body;
 
   if (!data || !Array.isArray(data)) {

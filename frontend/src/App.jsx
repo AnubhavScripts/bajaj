@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import TreeCard from './TreeCard.jsx'
 
-const API_URL = 'http://localhost:3001/bfhl';
 
-// placeholder hint in textarea
+const API_URL = '/api/bfhl';
+
+
 const PLACEHOLDER = `A->B
 A->C
 B->D
