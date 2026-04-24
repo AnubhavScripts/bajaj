@@ -1,5 +1,5 @@
-// api/bfhl.js — vercel serverless handler
-// all the processor logic lives here now, no separate file needed
+
+
 
 const USER_INFO = {
   user_id: "anubhav_parashar_24042026",
